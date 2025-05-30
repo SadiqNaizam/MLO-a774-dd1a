@@ -4,51 +4,45 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 27% 94.5%; /* PRD background #EDF0F5 */
+    --foreground: 220 8% 12%;    /* PRD primaryText #1C1E21 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;          /* PRD surface #FFFFFF */
+    --card-foreground: 220 8% 12%; /* PRD primaryText #1C1E21 */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;         /* PRD surface #FFFFFF */
+    --popover-foreground: 220 8% 12%;/* PRD primaryText #1C1E21 */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 89% 52%;        /* PRD accentBlue #1877F2 */
+    --primary-foreground: 0 0% 100%; /* White for text on accentBlue */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 223 17% 91%;      /* PRD accentGray #E4E6EB */
+    --secondary-foreground: 220 8% 12%;/* PRD primaryText #1C1E21 for text on accentGray */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 95.3%;           /* PRD sidebar color #F3F3F3 (as a general muted bg) */
+    --muted-foreground: 217 7% 41%; /* PRD secondaryText #606770 */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 223 17% 91%;         /* PRD accentGray #E4E6EB */
+    --accent-foreground: 220 8% 12%;/* PRD primaryText #1C1E21 for text on accentGray */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;    /* Existing */
+    --destructive-foreground: 210 40% 98%; /* Existing */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 223 10% 86%;         /* PRD border #D8DADF */
+    --input: 223 10% 86%;          /* PRD border #D8DADF (often same as border) */
+    --ring: 217 89% 52%;           /* PRD accentBlue #1877F2 for focus rings */
 
-    --radius: 0.5rem;
+    --radius: 0.25rem; /* Based on PRD borderRadius.default: "rounded" (0.25rem) */
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar specific vars - updated based on PRD main colors */
+    --sidebar-background: 0 0% 95.3%;      /* PRD sidebar #F3F3F3 */
+    --sidebar-foreground: 220 8% 12%;      /* PRD primaryText #1C1E21 */
+    --sidebar-primary: 217 89% 52%;        /* PRD accentBlue #1877F2 */
+    --sidebar-primary-foreground: 0 0% 100%;/* White */
+    --sidebar-accent: 223 17% 91%;         /* PRD accentGray #E4E6EB */
+    --sidebar-accent-foreground: 220 8% 12%;/* PRD primaryText #1C1E21 */
+    --sidebar-border: 223 10% 86%;         /* PRD border #D8DADF */
+    --sidebar-ring: 217 89% 52%;           /* PRD accentBlue #1877F2 */
   }
 
   .dark {
@@ -97,5 +91,10 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: Arial, sans-serif; /* From PRD typography.primaryFont */
+    font-size: 0.875rem; /* From PRD typography.body (text-sm) */
+    line-height: 1.25rem; /* From PRD typography.body (text-sm) */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
