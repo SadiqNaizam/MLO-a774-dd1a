@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+        sans: ['Arial', 'sans-serif'],
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -64,10 +67,16 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius)', // Will be 0.25rem based on new --radius
+				md: 'calc(var(--radius) - 2px)', // 0.25rem - 2px
+				sm: 'calc(var(--radius) - 4px)', // 0.25rem - 4px (0px)
+        default: '0.25rem', // PRD: effects.borderRadius.default ("rounded")
+        buttons: '0.375rem', // PRD: effects.borderRadius.buttons ("rounded-md")
+        full: '9999px' // PRD: effects.borderRadius.full ("rounded-full")
 			},
+      boxShadow: {
+        default: '0 1px 2px 0 rgb(0 0 0 / 0.05)', // PRD: effects.shadows.default ("shadow-sm")
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
